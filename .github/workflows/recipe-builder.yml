@@ -18,10 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python 3.8 for Neurodocker
+      - name: Set up Python for Neurodocker
         uses: actions/setup-python@v2
         with:
-          python-version: $PYTHON_VER
+          python-version: ${{ PYTHON_VER }}
       - name: Create recipe and build image
         run: |
           git config --local user.email "action@github.com"
