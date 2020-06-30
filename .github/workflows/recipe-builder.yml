@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - name: Create recipe
+      - name: Create recipe and build image
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -30,8 +30,6 @@ jobs:
           git add .
           git commit -m "$GITHUB_SHA"
           git push github HEAD:${GITHUB_REF}
-      - name: Build image
-        run: |
           for dockerfile in ./*.Dockerfile; do
             echo $dockerfile
             IMAGEID=docker.pkg.github.com/${{ github.repository }}/$(basename $dockerfile .Dockerfile)
