@@ -32,10 +32,10 @@ jobs:
           git push github HEAD:${GITHUB_REF}
           for dockerfile in ./*.Dockerfile; do
             echo $dockerfile
-            IMAGENAME=$(basename $dockerfile .Dockerfile)
-            IMAGEID=docker.pkg.github.com/${{ github.repository }}/$IMAGENAME
+            IMAGEID=docker.pkg.github.com/${{ github.repository }}/$(basename $dockerfile .Dockerfile)
+            IMAGEID=$(echo $IMAGEID | tr '[A-Z]' '[a-z]')
             echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
             docker pull $IMAGEID:latest || true
-            docker build . --file $IMAGENAME.Dockerfile --tag $IMAGEID:latest --cache-from $IMAGEID:latest
+            docker build . --file $dockerfile --tag $IMAGEID:latest --cache-from $IMAGEID:latest
             docker push $IMAGEID:latest
           done
