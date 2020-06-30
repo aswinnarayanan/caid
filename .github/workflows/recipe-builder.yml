@@ -24,6 +24,7 @@ jobs:
           python-version: ${{ PYTHON_VER }}
       - name: Create recipe and build image
         run: |
+          pip install --no-cache-dir https://github.com/NeuroDesk/neurodocker/tarball/master --upgrade
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
