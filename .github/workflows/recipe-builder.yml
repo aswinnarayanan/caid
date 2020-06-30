@@ -30,7 +30,7 @@ jobs:
           cd recipes/itksnap
           /bin/bash build.sh
           git add .
-          git commit -m "Update Repository"
+          git commit -m "$GITHUB_SHA"
           git push github HEAD:${GITHUB_REF}
           COMMITSHA=`git rev-parse --short HEAD`
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
