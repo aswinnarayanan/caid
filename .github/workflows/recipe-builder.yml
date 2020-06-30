@@ -9,37 +9,30 @@ on:
     paths:
       - recipes/itksnap/*
       - .github/workflows/recipe-builder.yml
-env:
-  IMAGEID: docker.pkg.github.com/${{ github.repository }}/itksnap_3.8.0:latest
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup github-actions user
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
-          git pull github ${GITHUB_REF} --ff-only
       - name: Set up Python 3.8 for Neurodocker
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - name: Run build.sh
-        run: cd recipes/itksnap && /bin/bash build.sh
-      - name: github-actions push to repo
+      - name: Build
         run: |
-           git add .
-           git commit -m "Update Repository"
-           git push github HEAD:${GITHUB_REF}
-
-      - name: Log into Github Package Registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
-      - name: Pull latest image
-        run: docker pull ${{ env.IMAGEID }} || true
-      - name: Build new image using cache
-        run: docker build . --file *.Dockerfile --tag ${{ env.IMAGEID }} --cache-from ${{ env.IMAGEID }}
-      - name: Push image to Github Package Registry
-        run: docker push ${{ env.IMAGEID }}
+          IMAGENAME=itksnap_3.8.0
+          IMAGEID=docker.pkg.github.com/${{ github.repository }}/$IMAGENAME:latest
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+          git pull github ${GITHUB_REF} --ff-only
+          cd recipes/itksnap
+          /bin/bash build.sh
+          git add .
+          git commit -m "Update Repository"
+          git push github HEAD:${GITHUB_REF}
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+          docker pull $IMAGEID || true
+          docker build . --file $IMAGENAME.Dockerfile --tag $IMAGEID --cache-from $IMAGEID
+          docker push $IMAGEID
