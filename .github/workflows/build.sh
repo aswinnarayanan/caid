@@ -13,7 +13,6 @@ for dockerfile in ./*.Dockerfile; do
   echo $dockerfile
   IMAGEID=docker.pkg.github.com/$GITHUB_REPOSITORY/$(basename $dockerfile .Dockerfile)
   IMAGEID=$(echo $IMAGEID | tr '[A-Z]' '[a-z]')
-  echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
   docker pull $IMAGEID:latest || true
   docker build . --file $dockerfile --tag $IMAGEID:latest --cache-from $IMAGEID:latest
   docker push $IMAGEID:latest
