@@ -35,6 +35,6 @@ jobs:
           COMMITSHA=`git rev-parse --short HEAD`
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
           docker pull $IMAGEID:latest || true
-          docker build . --file $IMAGENAME.Dockerfile --tag $IMAGEID:${COMMITSHA::8} --tag $IMAGEID:latest --cache-from $IMAGEID:latest
+          docker build . --file $IMAGENAME.Dockerfile --tag $IMAGEID:${COMMITSHA::8} --tag $IMAGEID --cache-from $IMAGEID:latest
           docker push $IMAGEID:${COMMITSHA::8}
-          docker push $IMAGEID:latest
+          docker push $IMAGEID
