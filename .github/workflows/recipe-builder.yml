@@ -31,7 +31,8 @@ jobs:
           git commit -m "$GITHUB_SHA"
           git push github HEAD:${GITHUB_REF}
           for dockerfile in ./*.Dockerfile; do
-            IMAGENAME=`basename $dockerfile`
+            echo $dockerfile
+            IMAGENAME=$(basename $dockerfile .Dockerfile)
             IMAGEID=docker.pkg.github.com/${{ github.repository }}/$IMAGENAME
             echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
             docker pull $IMAGEID:latest || true
