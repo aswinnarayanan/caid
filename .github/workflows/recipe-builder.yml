@@ -22,7 +22,7 @@ jobs:
       - name: Build
         run: |
           IMAGENAME=itksnap_3.8.0
-          IMAGEID=docker.pkg.github.com/${{ github.repository }}/$IMAGENAME:latest
+          IMAGEID=docker.pkg.github.com/${{ github.repository }}/$IMAGENAME
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
@@ -33,6 +33,6 @@ jobs:
           git commit -m "Update Repository"
           git push github HEAD:${GITHUB_REF}
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
-          docker pull $IMAGEID || true
-          docker build . --file $IMAGENAME.Dockerfile --tag $IMAGEID --cache-from $IMAGEID
+          docker pull $IMAGEID:latest || true
+          docker build . --file $IMAGENAME.Dockerfile --tag $IMAGEID:${GITHUB_SHA::8} --tag $IMAGEID --cache-from $IMAGEID:latest
           docker push $IMAGEID
