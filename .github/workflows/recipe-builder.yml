@@ -21,7 +21,7 @@ jobs:
       - name: Set up Python for Neurodocker
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ PYTHON_VER }}
+          python-version: ${{ env.PYTHON_VER }}
       - name: Create recipe and build image
         run: |
           pip install --no-cache-dir https://github.com/NeuroDesk/neurodocker/tarball/master --upgrade
