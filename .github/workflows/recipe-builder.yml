@@ -12,6 +12,9 @@ on:
       - .github/workflows/recipe-builder.yml
       - .github/workflows/build.sh
 
+env:
+  APPLICATION: itksnap
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,7 +24,7 @@ jobs:
         with:
           python-version: 3.8
       - name: Create recipe and build image
-        run: bash .github/workflows/build.sh itksnap
+        run: bash .github/workflows/build.sh
 #         run: |
 #           pip install --no-cache-dir ${{ env.NEURODOCKER_TARBALL }} --upgrade
 #           git config --local user.email "action@github.com"
