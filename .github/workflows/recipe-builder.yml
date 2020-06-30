@@ -10,7 +10,6 @@ on:
       - recipes/itksnap/*
       - .github/workflows/recipe-builder.yml
 env:
-  DOCKERFILE: itksnap/Dockerfile
   IMAGEID: docker.pkg.github.com/${{ github.repository }}/itksnap_3.8.0:latest
 
 jobs:
@@ -42,6 +41,6 @@ jobs:
       - name: Pull latest image
         run: docker pull ${{ env.IMAGEID }} || true
       - name: Build new image using cache
-        run: docker build . --file ${{ env.DOCKERFILE }} --tag ${{ env.IMAGEID }} --cache-from ${{ env.IMAGEID }}
+        run: docker build . --file *.DOCKERFILE --tag ${{ env.IMAGEID }} --cache-from ${{ env.IMAGEID }}
       - name: Push image to Github Package Registry
         run: docker push ${{ env.IMAGEID }}
