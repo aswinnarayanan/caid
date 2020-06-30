@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VER }}
       - name: Create recipe and build image
-        run: .github/workflows/build.sh
+        run: bash .github/workflows/build.sh
 #         run: |
 #           pip install --no-cache-dir ${{ env.NEURODOCKER_TARBALL }} --upgrade
 #           git config --local user.email "action@github.com"
