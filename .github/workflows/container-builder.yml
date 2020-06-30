@@ -3,11 +3,11 @@ name: Container Builder
 on:
   push:
     paths:
-      - itksnap/*Dockerfile
+      - recipes/itksnap/*Dockerfile
       - .github/workflows/container-builder.yml
   pull_request:
     paths:
-      - itksnap/*Dockerfile
+      - recipes/itksnap/*Dockerfile
       - .github/workflows/container-builder.yml
 
 env:
