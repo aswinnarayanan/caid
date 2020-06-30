@@ -20,4 +20,4 @@ jobs:
         with:
           python-version: 3.8
       - name: Run build.sh
-        run: cd recipes/itksnap && cat build.sh
+        run: cd recipes/itksnap && cat build.sh && bash build.sh
