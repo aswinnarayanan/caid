@@ -10,22 +10,16 @@ on:
       - recipes/itksnap/*
       - .github/workflows/recipe-builder.yml
 
-env:
-  APPLICATION: itksnap
-  PYTHON_VER: 3.8
-  NEURODOCKER_TARBALL: https://github.com/NeuroDesk/neurodocker/tarball/master
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python for Neurodocker
-        uses: actions/setup-python@v2
+      - uses: actions/setup-python@v2
         with:
-          python-version: ${{ env.PYTHON_VER }}
+          python-version: 3.8
       - name: Create recipe and build image
-        run: xargs <.github/workflows/build.sh
+        run: bash .github/workflows/build.sh itksnap
 #         run: |
 #           pip install --no-cache-dir ${{ env.NEURODOCKER_TARBALL }} --upgrade
 #           git config --local user.email "action@github.com"
