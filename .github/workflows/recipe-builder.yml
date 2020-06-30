@@ -11,7 +11,9 @@ on:
       - .github/workflows/recipe-builder.yml
 
 env:
+  APPLICATION: itksnap
   PYTHON_VER: 3.8
+  NEURODOCKER_TARBALL: https://github.com/NeuroDesk/neurodocker/tarball/master
 
 jobs:
   build:
@@ -24,12 +26,12 @@ jobs:
           python-version: ${{ env.PYTHON_VER }}
       - name: Create recipe and build image
         run: |
-          pip install --no-cache-dir https://github.com/NeuroDesk/neurodocker/tarball/master --upgrade
+          pip install --no-cache-dir ${{ env.NEURODOCKER_TARBALL }} --upgrade
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
           git pull github ${GITHUB_REF} --ff-only
-          cd recipes/itksnap
+          cd recipes/${{ env.APPLICATION }}
           /bin/bash build.sh
           git add .
           git commit -m "$GITHUB_SHA"
