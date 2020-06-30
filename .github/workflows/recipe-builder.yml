@@ -9,6 +9,9 @@ on:
     paths:
       - recipes/itksnap/*
       - .github/workflows/recipe-builder.yml
+env:
+  DOCKERFILE: itksnap/Dockerfile
+  IMAGEID: docker.pkg.github.com/${{ github.repository }}/itksnap_3.8.0:latest
 
 jobs:
   build:
@@ -33,3 +36,12 @@ jobs:
            git add .
            git commit -m "Update Repository"
            git push github HEAD:${GITHUB_REF}
+
+      - name: Log into Github Package Registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+      - name: Pull latest image
+        run: docker pull ${{ env.IMAGEID }} || true
+      - name: Build new image using cache
+        run: docker build . --file ${{ env.DOCKERFILE }} --tag ${{ env.IMAGEID }} --cache-from ${{ env.IMAGEID }}
+      - name: Push image to Github Package Registry
+        run: docker push ${{ env.IMAGEID }}
