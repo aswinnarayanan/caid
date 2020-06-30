@@ -21,3 +21,10 @@ on:
           python-version: 3.8
       - name: Run build.sh
         run: cd recipes/itksnap && cat build.sh && bash build.sh
+      - name: Commit Dockerfile(s) back to repo
+        run: |
+          git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+          git pull github ${GITHUB_REF} --ff-only
+          git add .
+          git commit -m "Update Repository"
+          git push github HEAD:${GITHUB_REF}
