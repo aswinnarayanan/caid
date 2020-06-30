@@ -21,8 +21,6 @@ jobs:
           python-version: 3.8
       - name: Build
         run: |
-          IMAGENAME=itksnap_3.8.0
-          IMAGEID=docker.pkg.github.com/${{ github.repository }}/$IMAGENAME
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
@@ -32,8 +30,11 @@ jobs:
           git add .
           git commit -m "$GITHUB_SHA"
           git push github HEAD:${GITHUB_REF}
-          COMMITSHA=`git rev-parse --short HEAD`
-          echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
-          docker pull $IMAGEID:latest || true
-          docker build . --file $IMAGENAME.Dockerfile --tag $IMAGEID:latest --cache-from $IMAGEID:latest
-          docker push $IMAGEID:latest
+          for dockerfile in ./*.Dockerfile; do
+            IMAGENAME=`basename $dockerfile`
+            IMAGEID=docker.pkg.github.com/${{ github.repository }}/$IMAGENAME
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+            docker pull $IMAGEID:latest || true
+            docker build . --file $IMAGENAME.Dockerfile --tag $IMAGEID:latest --cache-from $IMAGEID:latest
+            docker push $IMAGEID:latest
+          done
