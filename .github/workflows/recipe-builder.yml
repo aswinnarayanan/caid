@@ -17,19 +17,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
-      - name: Run build.sh
-        run: cd recipes/itksnap && /bin/bash build.sh
       - name: Setup github-actions user
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
           git pull github ${GITHUB_REF} --ff-only
-
+      - name: Set up Python 3.8 for Neurodocker
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Run build.sh
+        run: cd recipes/itksnap && /bin/bash build.sh
       - name: github-actions push to repo
         run: |
            git add .
