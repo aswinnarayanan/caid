@@ -3,14 +3,14 @@ name: Recipe Builder
 on:
   push:
     paths:
-      - recipes/itksnap/build.sh
+      - recipes/itksnap/*
       - .github/workflows/recipe-builder.yml
   pull_request:
     paths:
-      - recipes/itksnap/build.sh
+      - recipes/itksnap/*
       - .github/workflows/recipe-builder.yml
 
-jobs:
+  jobs:
   build:
     runs-on: ubuntu-latest
     steps:
