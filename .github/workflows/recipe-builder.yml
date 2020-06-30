@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: 3.8
       - name: Run build.sh
-        run: cd recipes/itksnap && cat build.sh && bash build.sh
+        run: cd recipes/itksnap && ./build.sh
       - name: Setup git-actions user
         run: |
           git config --local user.email "action@github.com"
