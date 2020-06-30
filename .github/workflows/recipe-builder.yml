@@ -10,6 +10,9 @@ on:
       - recipes/itksnap/*
       - .github/workflows/recipe-builder.yml
 
+env:
+  PYTHON_VER: 3.8
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,7 +21,7 @@ jobs:
       - name: Set up Python 3.8 for Neurodocker
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8
+          python-version: $PYTHON_VER
       - name: Create recipe and build image
         run: |
           git config --local user.email "action@github.com"
