@@ -1,11 +1,10 @@
 #!/bin/bash
 
-pip install --no-cache-dir ${{ env.NEURODOCKER_TARBALL }} --upgrade
 git config --local user.email "action@github.com"
 git config --local user.name "GitHub Action"
 git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
 git pull github ${GITHUB_REF} --ff-only
-cd recipes/${{ env.APPLICATION }}
+cd recipes/$1
 /bin/bash build.sh
 git add .
 git commit -m "$GITHUB_SHA"
