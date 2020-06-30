@@ -23,6 +23,8 @@ jobs:
         run: cd recipes/itksnap && cat build.sh && bash build.sh
       - name: Commit Dockerfile(s) back to repo
         run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
           git pull github ${GITHUB_REF} --ff-only
           git add .
