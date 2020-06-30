@@ -10,7 +10,7 @@ on:
       - recipes/itksnap/*
       - .github/workflows/recipe-builder.yml
 
-  jobs:
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
