@@ -1,20 +1,23 @@
-name: Recipe Builder
-
-on:
-  push:
-    paths:
-      - recipes/itksnap/*
-      - .github/workflows/recipe-builder.yml
-      - .github/workflows/build.sh
-  pull_request:
-    paths:
-      - recipes/itksnap/*
-      - .github/workflows/recipe-builder.yml
-      - .github/workflows/build.sh
+name: itksnap
 
 env:
   APPLICATION: itksnap
   PYTHON_VER: 3.8
+
+on:
+  push:
+    paths:
+      - recipes/*
+      - recipes/itksnap/*
+      - .github/workflows/itksnap.yml
+      - .github/workflows/build.sh
+
+  pull_request:
+    paths:
+      - recipes/*
+      - recipes/itksnap/*
+      - .github/workflows/itksnap.yml
+      - .github/workflows/build.sh
 
 jobs:
   build:
