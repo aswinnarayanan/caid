@@ -20,4 +20,4 @@ jobs:
         with:
           python-version: 3.8
       - name: Run build.sh
-        run: cd recipes/itksnap && ./build.sh && cat itksnap_3.8.0.Dockerfile
+        run: cd recipes/itksnap && cat build.sh
