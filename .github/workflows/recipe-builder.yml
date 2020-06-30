@@ -32,7 +32,8 @@ jobs:
           git add .
           git commit -m "Update Repository"
           git push github HEAD:${GITHUB_REF}
+          COMMITSHA=`git rev-parse --short HEAD`
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
           docker pull $IMAGEID:latest || true
-          docker build . --file $IMAGENAME.Dockerfile --tag $IMAGEID:${GITHUB_SHA::8} --tag $IMAGEID:latest --cache-from $IMAGEID:latest
-          docker push $IMAGEID:latest $IMAGEID:${GITHUB_SHA::8}
+          docker build . --file $IMAGENAME.Dockerfile --tag $IMAGEID:${COMMITSHA::8} --tag $IMAGEID:latest --cache-from $IMAGEID:latest
+          docker push $IMAGEID:latest $IMAGEID:${COMMITSHA::8}
