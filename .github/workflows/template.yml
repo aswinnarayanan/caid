@@ -69,8 +69,9 @@ jobs:
         run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
       - name: Testing space
         run: |
-          ls -la /opt
-          du -sh /opt/*
+          sudo ls -la /*
+          sudo du -sh /*
+
 
 
 #       - name: Free up disk space on runner (optional)
