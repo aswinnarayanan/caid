@@ -22,6 +22,8 @@ docker build . --file ${IMAGENAME}.Dockerfile --tag $IMAGEID:$SHORT_SHA --cache-
 echo "[DEBUG] # Get image RootFS to check for changes ..."
 ROOTFS_NEW=$(docker inspect --format='{{.RootFS}}' $IMAGEID:$SHORT_SHA)
 
+df -ha
+
 # Tag and Push if new image RootFS differs from cached image
 if [ "$ROOTFS_NEW" = "$ROOTFS_CACHE" ]; then
     echo "[DEBUG] Skipping push to registry. No changes found"
