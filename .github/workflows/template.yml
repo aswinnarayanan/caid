@@ -70,8 +70,9 @@ jobs:
       - name: Testing space
         run: |
           ls -la /opt/hostedtoolcache
-          sudo apt update && sudo apt install tree
-          tree /opt
+          du -sh /opt/hostedtoolcache/*
+
+
 #       - name: Free up disk space on runner (optional)
 #         if: env.APPLICATION == 'fsl' || env.APPLICATION == 'mrtrix3'
 #         run: bash .github/workflows/free-up-space.sh
