@@ -1,5 +1,7 @@
 #!/bin/bash
 
+df -ha
+
 # Free disk space docker and swap (about 4GB)
 sudo swapoff -a
 sudo rm -f /swapfile
@@ -7,13 +9,8 @@ sudo apt clean
 docker rmi $(docker image ls -aq)
 
 df -ha
-echo $AGENT_TOOLSDIRECTORY
-du -sh /usr/local/share/boost
-du -sh $AGENT_TOOLSDIRECTORY
-df -ha
-
-sudo rm -rf "/usr/local/share/boost"
 sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+df -ha
 
 # Free disk space packages (about 20GB)
 sudo apt-get remove aria2 ansible azure-cli shellcheck rpm xorriso zsync \
@@ -53,3 +50,5 @@ sudo apt-get remove aria2 ansible azure-cli shellcheck rpm xorriso zsync \
     sudo apt-get autoremove -y
     sudo apt-get autoclean -y
     sudo rm -rf /usr/local/lib/android
+
+df -ha
