@@ -69,15 +69,15 @@ jobs:
         run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
       - name: Testing space
         run: |
-          du -sh /usr/bin/php*
-          du -sh /usr/lib/php*
-          du -sh /usr/local/php*
-          du -sh /usr/share/php*
+          du -sh /usr/bin/php* || true
+          du -sh /usr/lib/php* || true
+          du -sh /usr/local/php* || true
+          du -sh /usr/share/php* || true
           
-          sudo rm -rf /usr/bin/php*
-          sudo rm -rf /usr/lib/php*
-          sudo rm -rf /usr/local/php*
-          sudo rm -rf /usr/share/php*
+          sudo rm -rf /usr/bin/php*  || true
+          sudo rm -rf /usr/lib/php* || true
+          sudo rm -rf /usr/local/php* || true
+          sudo rm -rf /usr/share/php* || true
 
 
 
