@@ -70,435 +70,435 @@ jobs:
       - name: Testing space
         run: |
             df -m /
-            sudo apt-get remove -yqq aria2
+            sudo apt-get remove -yqq aria2 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq ansible
+            sudo apt-get remove -yqq ansible > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq azure-cli
+            sudo apt-get remove -yqq azure-cli > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq shellcheck
+            sudo apt-get remove -yqq shellcheck > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq rpm
+            sudo apt-get remove -yqq rpm > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq xorriso
+            sudo apt-get remove -yqq xorriso > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq zsync
+            sudo apt-get remove -yqq zsync > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq clang-6.0
+            sudo apt-get remove -yqq clang-6.0 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq lld-6.0
+            sudo apt-get remove -yqq lld-6.0 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq clang-format-6.0
+            sudo apt-get remove -yqq clang-format-6.0 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq clang-8
+            sudo apt-get remove -yqq clang-8 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq lld-8
+            sudo apt-get remove -yqq lld-8 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq clang-format-8
+            sudo apt-get remove -yqq clang-format-8 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq clang-9
+            sudo apt-get remove -yqq clang-9 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq lldb-9
+            sudo apt-get remove -yqq lldb-9 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq lld-9
+            sudo apt-get remove -yqq lld-9 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq clangd-9
+            sudo apt-get remove -yqq clangd-9 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq clang-format-9
+            sudo apt-get remove -yqq clang-format-9 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq dotnet-sdk-3.0
+            sudo apt-get remove -yqq dotnet-sdk-3.0 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq dotnet-sdk-3.1=3.1.101-1
+            sudo apt-get remove -yqq dotnet-sdk-3.1=3.1.101-1 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq esl-erlang
+            sudo apt-get remove -yqq esl-erlang > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq firefox
+            sudo apt-get remove -yqq firefox > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq g++-8
+            sudo apt-get remove -yqq g++-8 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq g++-9
+            sudo apt-get remove -yqq g++-9 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq gfortran-8
+            sudo apt-get remove -yqq gfortran-8 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq gfortran-9
+            sudo apt-get remove -yqq gfortran-9 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq google-chrome-stable
+            sudo apt-get remove -yqq google-chrome-stable > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq google-cloud-sdk
+            sudo apt-get remove -yqq google-cloud-sdk > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq ghc-8.8.3
+            sudo apt-get remove -yqq ghc-8.8.3 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq ghc-8.10.1
+            sudo apt-get remove -yqq ghc-8.10.1 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq cabal-install-3.2
+            sudo apt-get remove -yqq cabal-install-3.2 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq heroku
+            sudo apt-get remove -yqq heroku > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq imagemagick
+            sudo apt-get remove -yqq imagemagick > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq libmagickcore-dev
+            sudo apt-get remove -yqq libmagickcore-dev > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq libmagickwand-dev
+            sudo apt-get remove -yqq libmagickwand-dev > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq libmagic-dev
+            sudo apt-get remove -yqq libmagic-dev > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq ant
+            sudo apt-get remove -yqq ant > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq ant-optional
+            sudo apt-get remove -yqq ant-optional > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq kubectl
+            sudo apt-get remove -yqq kubectl > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq mercurial
+            sudo apt-get remove -yqq mercurial > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq apt-transport-mttps
+            sudo apt-get remove -yqq apt-transport-mttps > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq mono-complete
+            sudo apt-get remove -yqq mono-complete > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq libmysqlclient-dev
+            sudo apt-get remove -yqq libmysqlclient-dev > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq mysql-server
+            sudo apt-get remove -yqq mysql-server > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq mssql-tools
+            sudo apt-get remove -yqq mssql-tools > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq unixodbc-dev
+            sudo apt-get remove -yqq unixodbc-dev > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq yarn
+            sudo apt-get remove -yqq yarn > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq bazel
+            sudo apt-get remove -yqq bazel > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq chrpath
+            sudo apt-get remove -yqq chrpath > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq libssl-dev
+            sudo apt-get remove -yqq libssl-dev > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq libxft-dev
+            sudo apt-get remove -yqq libxft-dev > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq libfreetype6
+            sudo apt-get remove -yqq libfreetype6 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq libfreetype6-dev
+            sudo apt-get remove -yqq libfreetype6-dev > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq libfontconfig1
+            sudo apt-get remove -yqq libfontconfig1 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq libfontconfig1-dev
+            sudo apt-get remove -yqq libfontconfig1-dev > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1
+            sudo apt-get remove -yqq php7.1 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-bcmath
+            sudo apt-get remove -yqq php7.1-bcmath > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-bz2
+            sudo apt-get remove -yqq php7.1-bz2 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-cgi
+            sudo apt-get remove -yqq php7.1-cgi > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-cli
+            sudo apt-get remove -yqq php7.1-cli > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-common
+            sudo apt-get remove -yqq php7.1-common > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-curl
+            sudo apt-get remove -yqq php7.1-curl > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-dba
+            sudo apt-get remove -yqq php7.1-dba > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-enchant
+            sudo apt-get remove -yqq php7.1-enchant > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-fpm
+            sudo apt-get remove -yqq php7.1-fpm > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-gd
+            sudo apt-get remove -yqq php7.1-gd > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-gmp
+            sudo apt-get remove -yqq php7.1-gmp > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-imap
+            sudo apt-get remove -yqq php7.1-imap > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-interbase
+            sudo apt-get remove -yqq php7.1-interbase > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-intl
+            sudo apt-get remove -yqq php7.1-intl > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-json
+            sudo apt-get remove -yqq php7.1-json > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-ldap
+            sudo apt-get remove -yqq php7.1-ldap > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-mbstring
+            sudo apt-get remove -yqq php7.1-mbstring > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-mcrypt
+            sudo apt-get remove -yqq php7.1-mcrypt > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-mysql
+            sudo apt-get remove -yqq php7.1-mysql > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-odbc
+            sudo apt-get remove -yqq php7.1-odbc > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-opcache
+            sudo apt-get remove -yqq php7.1-opcache > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-pgsql
+            sudo apt-get remove -yqq php7.1-pgsql > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-phpdbg
+            sudo apt-get remove -yqq php7.1-phpdbg > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-pspell
+            sudo apt-get remove -yqq php7.1-pspell > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-readline
+            sudo apt-get remove -yqq php7.1-readline > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-recode
+            sudo apt-get remove -yqq php7.1-recode > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-snmp
+            sudo apt-get remove -yqq php7.1-snmp > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-soap
+            sudo apt-get remove -yqq php7.1-soap > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-sqlite3
+            sudo apt-get remove -yqq php7.1-sqlite3 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-sybase
+            sudo apt-get remove -yqq php7.1-sybase > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-tidy
+            sudo apt-get remove -yqq php7.1-tidy > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-xml
+            sudo apt-get remove -yqq php7.1-xml > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-xmlrpc
+            sudo apt-get remove -yqq php7.1-xmlrpc > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-xsl
+            sudo apt-get remove -yqq php7.1-xsl > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.1-zip
+            sudo apt-get remove -yqq php7.1-zip > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2
+            sudo apt-get remove -yqq php7.2 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-bcmath
+            sudo apt-get remove -yqq php7.2-bcmath > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-bz2
+            sudo apt-get remove -yqq php7.2-bz2 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-cgi
+            sudo apt-get remove -yqq php7.2-cgi > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-cli
+            sudo apt-get remove -yqq php7.2-cli > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-common
+            sudo apt-get remove -yqq php7.2-common > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-curl
+            sudo apt-get remove -yqq php7.2-curl > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-dba
+            sudo apt-get remove -yqq php7.2-dba > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-enchant
+            sudo apt-get remove -yqq php7.2-enchant > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-fpm
+            sudo apt-get remove -yqq php7.2-fpm > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-gd
+            sudo apt-get remove -yqq php7.2-gd > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-gmp
+            sudo apt-get remove -yqq php7.2-gmp > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-imap
+            sudo apt-get remove -yqq php7.2-imap > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-interbase
+            sudo apt-get remove -yqq php7.2-interbase > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-intl
+            sudo apt-get remove -yqq php7.2-intl > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-json
+            sudo apt-get remove -yqq php7.2-json > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-ldap
+            sudo apt-get remove -yqq php7.2-ldap > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-mbstring
+            sudo apt-get remove -yqq php7.2-mbstring > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-mysql
+            sudo apt-get remove -yqq php7.2-mysql > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-odbc
+            sudo apt-get remove -yqq php7.2-odbc > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-opcache
+            sudo apt-get remove -yqq php7.2-opcache > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-pgsql
+            sudo apt-get remove -yqq php7.2-pgsql > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-phpdbg
+            sudo apt-get remove -yqq php7.2-phpdbg > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-pspell
+            sudo apt-get remove -yqq php7.2-pspell > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-readline
+            sudo apt-get remove -yqq php7.2-readline > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-recode
+            sudo apt-get remove -yqq php7.2-recode > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-snmp
+            sudo apt-get remove -yqq php7.2-snmp > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-soap
+            sudo apt-get remove -yqq php7.2-soap > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-sqlite3
+            sudo apt-get remove -yqq php7.2-sqlite3 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-sybase
+            sudo apt-get remove -yqq php7.2-sybase > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-tidy
+            sudo apt-get remove -yqq php7.2-tidy > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-xml
+            sudo apt-get remove -yqq php7.2-xml > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-xmlrpc
+            sudo apt-get remove -yqq php7.2-xmlrpc > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-xsl
+            sudo apt-get remove -yqq php7.2-xsl > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.2-zip
+            sudo apt-get remove -yqq php7.2-zip > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3
+            sudo apt-get remove -yqq php7.3 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-bcmath
+            sudo apt-get remove -yqq php7.3-bcmath > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-bz2
+            sudo apt-get remove -yqq php7.3-bz2 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-cgi
+            sudo apt-get remove -yqq php7.3-cgi > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-cli
+            sudo apt-get remove -yqq php7.3-cli > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-common
+            sudo apt-get remove -yqq php7.3-common > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-curl
+            sudo apt-get remove -yqq php7.3-curl > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-dba
+            sudo apt-get remove -yqq php7.3-dba > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-dev
+            sudo apt-get remove -yqq php7.3-dev > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-enchant
+            sudo apt-get remove -yqq php7.3-enchant > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-fpm
+            sudo apt-get remove -yqq php7.3-fpm > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-gd
+            sudo apt-get remove -yqq php7.3-gd > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-gmp
+            sudo apt-get remove -yqq php7.3-gmp > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-imap
+            sudo apt-get remove -yqq php7.3-imap > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-interbase
+            sudo apt-get remove -yqq php7.3-interbase > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-intl
+            sudo apt-get remove -yqq php7.3-intl > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-json
+            sudo apt-get remove -yqq php7.3-json > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-ldap
+            sudo apt-get remove -yqq php7.3-ldap > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-mbstring
+            sudo apt-get remove -yqq php7.3-mbstring > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-mysql
+            sudo apt-get remove -yqq php7.3-mysql > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-odbc
+            sudo apt-get remove -yqq php7.3-odbc > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-opcache
+            sudo apt-get remove -yqq php7.3-opcache > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-pgsql
+            sudo apt-get remove -yqq php7.3-pgsql > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-phpdbg
+            sudo apt-get remove -yqq php7.3-phpdbg > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-pspell
+            sudo apt-get remove -yqq php7.3-pspell > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-readline
+            sudo apt-get remove -yqq php7.3-readline > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-recode
+            sudo apt-get remove -yqq php7.3-recode > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-snmp
+            sudo apt-get remove -yqq php7.3-snmp > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-soap
+            sudo apt-get remove -yqq php7.3-soap > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-sqlite3
+            sudo apt-get remove -yqq php7.3-sqlite3 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-sybase
+            sudo apt-get remove -yqq php7.3-sybase > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-tidy
+            sudo apt-get remove -yqq php7.3-tidy > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-xml
+            sudo apt-get remove -yqq php7.3-xml > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-xmlrpc
+            sudo apt-get remove -yqq php7.3-xmlrpc > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-xsl
+            sudo apt-get remove -yqq php7.3-xsl > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.3-zip
+            sudo apt-get remove -yqq php7.3-zip > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4
+            sudo apt-get remove -yqq php7.4 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-bcmath
+            sudo apt-get remove -yqq php7.4-bcmath > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-bz2
+            sudo apt-get remove -yqq php7.4-bz2 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-cgi
+            sudo apt-get remove -yqq php7.4-cgi > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-cli
+            sudo apt-get remove -yqq php7.4-cli > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-common
+            sudo apt-get remove -yqq php7.4-common > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-curl
+            sudo apt-get remove -yqq php7.4-curl > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-dba
+            sudo apt-get remove -yqq php7.4-dba > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-dev
+            sudo apt-get remove -yqq php7.4-dev > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-enchant
+            sudo apt-get remove -yqq php7.4-enchant > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-fpm
+            sudo apt-get remove -yqq php7.4-fpm > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-gd
+            sudo apt-get remove -yqq php7.4-gd > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-gmp
+            sudo apt-get remove -yqq php7.4-gmp > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-imap
+            sudo apt-get remove -yqq php7.4-imap > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-interbase
+            sudo apt-get remove -yqq php7.4-interbase > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-intl
+            sudo apt-get remove -yqq php7.4-intl > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-json
+            sudo apt-get remove -yqq php7.4-json > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-ldap
+            sudo apt-get remove -yqq php7.4-ldap > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-mbstring
+            sudo apt-get remove -yqq php7.4-mbstring > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-mysql
+            sudo apt-get remove -yqq php7.4-mysql > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-odbc
+            sudo apt-get remove -yqq php7.4-odbc > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-opcache
+            sudo apt-get remove -yqq php7.4-opcache > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-pgsql
+            sudo apt-get remove -yqq php7.4-pgsql > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-phpdbg
+            sudo apt-get remove -yqq php7.4-phpdbg > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-pspell
+            sudo apt-get remove -yqq php7.4-pspell > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-readline
+            sudo apt-get remove -yqq php7.4-readline > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-snmp
+            sudo apt-get remove -yqq php7.4-snmp > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-soap
+            sudo apt-get remove -yqq php7.4-soap > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-sqlite3
+            sudo apt-get remove -yqq php7.4-sqlite3 > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-sybase
+            sudo apt-get remove -yqq php7.4-sybase > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-tidy
+            sudo apt-get remove -yqq php7.4-tidy > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-xml
+            sudo apt-get remove -yqq php7.4-xml > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-xmlrpc
+            sudo apt-get remove -yqq php7.4-xmlrpc > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-xsl
+            sudo apt-get remove -yqq php7.4-xsl > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php7.4-zip
+            sudo apt-get remove -yqq php7.4-zip > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php-amqp
+            sudo apt-get remove -yqq php-amqp > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php-apcu
+            sudo apt-get remove -yqq php-apcu > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php-igbinary
+            sudo apt-get remove -yqq php-igbinary > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php-memcache
+            sudo apt-get remove -yqq php-memcache > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php-memcached
+            sudo apt-get remove -yqq php-memcached > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php-mongodb
+            sudo apt-get remove -yqq php-mongodb > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php-redis
+            sudo apt-get remove -yqq php-redis > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php-xdebug
+            sudo apt-get remove -yqq php-xdebug > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq php-zmq
+            sudo apt-get remove -yqq php-zmq > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq snmp
+            sudo apt-get remove -yqq snmp > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq pollinate
+            sudo apt-get remove -yqq pollinate > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq libpq-dev
+            sudo apt-get remove -yqq libpq-dev > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq postgresql-client
+            sudo apt-get remove -yqq postgresql-client > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq powershell
+            sudo apt-get remove -yqq powershell > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq ruby-full
+            sudo apt-get remove -yqq ruby-full > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq sphinxsearch
+            sudo apt-get remove -yqq sphinxsearch > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq subversion
+            sudo apt-get remove -yqq subversion > /dev/null 2>&1
             df -m /
-            sudo apt-get remove -yqq mongodb-org
+            sudo apt-get remove -yqq mongodb-org > /dev/null 2>&1
             df -m /
 
 #       - name: Free up disk space on runner (optional)
